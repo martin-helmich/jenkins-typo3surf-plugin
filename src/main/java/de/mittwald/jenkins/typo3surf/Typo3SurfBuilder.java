@@ -84,7 +84,7 @@ public class Typo3SurfBuilder extends Builder
 	{
 		if (!deploymentExists(listener.getLogger()))
 		{
-			listener.getLogger().println(
+			listener.fatalError(
 					"Deployment " + deployment + " does not exist!");
 			return false;
 		}
@@ -102,6 +102,7 @@ public class Typo3SurfBuilder extends Builder
 		}
 		catch (IOException e)
 		{
+			listener.fatalError(e.getMessage());
 			return false;
 		}
 	}
