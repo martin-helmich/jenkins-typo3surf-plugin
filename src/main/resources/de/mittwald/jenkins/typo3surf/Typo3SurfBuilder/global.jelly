@@ -11,10 +11,14 @@
     tags they use. Views are always organized according to its owner class,
     so it should be straightforward to find them.
   -->
-  <f:section title="Hello World Builder">
-    <f:entry title="French" field="useFrench"
-      description="Check if we should say hello in French">
-      <f:checkbox />
+  <f:section title="TYPO3 Surf Builder">
+    <f:entry title="TYPO3 Surf Path" field="surfPath"
+      description="TYPO3 Surf installation path">
+      <f:textbox />
+    </f:entry>
+    <f:entry title="TYPO3 Flow Context" field="surfContext"
+      description="Either &quot;Development&quot; or &quot;Production&quot;">
+      <f:textbox />
     </f:entry>
   </f:section>
 </j:jelly>
