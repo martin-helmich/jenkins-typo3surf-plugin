@@ -95,6 +95,9 @@ public class Typo3SurfBuilder extends Builder
 		env.put("FLOW_CONTEXT", getDescriptor().getSurfContext());
 		args.add(getDescriptor().getSurfPath(), "surf:deploy", "--disable-ansi", deployment);
 
+		listener.getLogger().println("Using \"" + getDescriptor().getSurfContext() + "\" context.");
+		listener.getLogger().println("Starting deployment " + deployment);
+
 		try
 		{
 			int result = launcher.launch().cmds(args).envs(env).stdout(listener.getLogger()).join();
