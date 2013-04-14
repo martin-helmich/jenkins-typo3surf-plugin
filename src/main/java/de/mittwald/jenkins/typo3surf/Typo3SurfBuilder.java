@@ -129,7 +129,7 @@ public class Typo3SurfBuilder extends Builder
 		public FormValidation doCheckSurfPath(@QueryParameter String value)
 				throws IOException, ServletException
 		{
-			if (new File(value).canExecute() == false)
+			if (new File(value + "/flow").canExecute() == false)
 			{
 				return FormValidation
 						.error("No TYPO3 Surf installation found at " + value);
@@ -174,6 +174,11 @@ public class Typo3SurfBuilder extends Builder
 		public String getSurfPath()
 		{
 			return surfPath;
+		}
+
+		public String getSurfExecutable()
+		{
+			return surfPath + "/flow";
 		}
 
 		public String getSurfContext()
