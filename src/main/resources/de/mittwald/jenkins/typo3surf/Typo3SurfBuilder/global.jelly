@@ -16,9 +16,11 @@
       description="TYPO3 Surf installation path">
       <f:textbox />
     </f:entry>
-    <f:entry title="TYPO3 Flow Context" field="surfContext"
-      description="Either &quot;Development&quot; or &quot;Production&quot;">
-      <f:textbox />
-    </f:entry>
+    <f:advanced>
+      <f:entry title="TYPO3 Flow Context" field="surfContext">
+        <f:radio value="Development" title="Development" name="surfContext" checked="${descriptor.surfContext == 'Development'}" />
+        <f:radio value="Production" title="Production" name="surfContext" checked="${descriptor.surfContext == 'Production'}" />
+      </f:entry>
+    </f:advanced>
   </f:section>
 </j:jelly>
