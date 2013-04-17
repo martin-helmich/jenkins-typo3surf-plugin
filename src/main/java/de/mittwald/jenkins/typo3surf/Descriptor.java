@@ -1,6 +1,5 @@
 package de.mittwald.jenkins.typo3surf;
 
-import hudson.Extension;
 import hudson.model.AbstractProject;
 import hudson.tasks.BuildStepDescriptor;
 import hudson.tasks.Builder;
